@@ -700,9 +700,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (downloadBtn) {
         downloadBtn.addEventListener('click', function(e) {
             e.preventDefault();
+            
+            const baseUrl = window.location.origin + window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+            const pdfUrl = baseUrl + '/cv.pdf';
+
             const link = document.createElement('a');
-            link.href = 'cv.pdf';
+            link.href = pdfUrl;
             link.download = 'ahmed-mansour-cv.pdf';
+            link.target = '_blank';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
