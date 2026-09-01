@@ -693,3 +693,19 @@ window.addEventListener('scroll', () => {
     const progress = (window.scrollY / totalHeight) * 100;
     progressBar.style.width = progress + '%';
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const downloadBtn = document.querySelector('#downloadResumeBtn');
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const link = document.createElement('a');
+            link.href = 'cv.pdf';
+            link.download = 'ahmed-mansour-cv.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    }
+});
