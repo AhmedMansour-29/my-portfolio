@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Mansour - Front-End Developer & UI/UX Specialist</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" href="#home">
+                Ahmed <span class="text-accent">Mansour</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <a href="#contact" class="btn btn-primary-custom nav-btn">Hire Me <i class="fa-solid fa-paper-plane ms-1"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section d-flex align-items-center">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7" data-aos="fade-right">
+                <div class="hero-badge mb-3">
+                    <span id="typed-text"></span><span class="cursor-blink">|</span>
+                </div>
+                <h1 class="hero-title">Hi, I'm <br><span class="gradient-text">Ahmed Mansour</span></h1>
+                <p class="hero-desc">
+                    I build high-performance, pixel-perfect, and responsive web interfaces using modern web technologies. I specialize in turning complex Figma designs into clean, maintainable, and interactive web experiences.
+                </p>
+                <div class="hero-buttons d-flex gap-3 flex-wrap">
+                    <a href="#projects" class="btn btn-gradient">View Projects</a>
+                    <a href="#contact" class="btn btn-outline-custom">Let's Collaborate <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-5 text-center mt-5 mt-lg-0" data-aos="fade-left">
+                <div class="hero-img-wrapper">
+                    <div class="orbit-container">
+                        <div class="orbit-icon icon-1"><i class="fa-brands fa-html5"></i></div>
+                        <div class="orbit-icon icon-2"><i class="fa-brands fa-css3-alt"></i></div>
+                        <div class="orbit-icon icon-3"><i class="fa-brands fa-js"></i></div>
+                        <div class="orbit-icon icon-4"><i class="fa-brands fa-bootstrap"></i></div>
+                        <div class="orbit-icon icon-5"><i class="fa-brands fa-figma"></i></div>
+                    </div>
+                    <div class="profile-frame">
+                        <img src="profile.jpg" alt="Ahmed Mansour" class="img-fluid profile-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- About Me Section -->
+<section id="about" class="section-padding py-5">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <!-- الصورة الشخصية على الشمال -->
+            <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+                <div class="about-img-box">
+                    <img src="profile.jpg" alt="Ahmed Mansour About" class="img-fluid rounded-4 shadow-lg">
+                </div>
+            </div>
+
+            <!-- التفاصيل والمهارات المتستفة على اليمين -->
+            <div class="col-lg-7" data-aos="fade-left">
+                <h2 class="section-title mb-3">About <span class="text-warning">Me</span></h2>
+                
+               <ul class="list-unstyled text-muted fs-6 mb-4">
+    <li class="mb-2 d-flex align-items-center">
+        <i class="fas fa-graduation-cap text-warning me-3 fs-5"></i>
+        <span><strong>Senior CS Student</strong> at Misr Higher Institute for Commerce and Computers, Mansoura.</span>
+    </li>
+    <li class="mb-2 d-flex align-items-center">
+        <i class="fas fa-laptop-code text-warning me-3 fs-5"></i>
+        <span>Driven & passionate <strong>Front-End Developer</strong> & <strong>UI/UX Specialist</strong>.</span>
+    </li>
+    <li class="mb-2 d-flex align-items-center">
+        <i class="fas fa-layer-group text-warning me-3 fs-5"></i>
+        <span>Bridging the gap between <strong>Design</strong> and <strong>Engineering</strong>.</span>
+    </li>
+    <li class="mb-0 d-flex align-items-center">
+        <i class="fas fa-bolt text-warning me-3 fs-5"></i>
+        <span>Building fast, fully responsive, and highly interactive web applications.</span>
+    </li>
+</ul>
+
+
+                <!-- كروت التقنيات المتستفة -->
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <div class="card p-3 rounded-3 shadow-sm border-0 h-100">
+                            <h6 class="fw-bold mb-2 text-warning"><i class="fas fa-code me-2"></i>Frontend & UI/UX</h6>
+                            <div class="d-flex flex-wrap gap-1">
+                                <span class="badge bg-dark border border-secondary">HTML5 & CSS3</span>
+                                <span class="badge bg-dark border border-secondary">JavaScript (ES6+)</span>
+                                <span class="badge bg-dark border border-secondary">Bootstrap</span>
+                                <span class="badge bg-dark border border-secondary">Tailwind CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card p-3 rounded-3 shadow-sm border-0 h-100">
+                            <h6 class="fw-bold mb-2 text-warning"><i class="fas fa-brain me-2"></i>CS Core</h6>
+                            <div class="d-flex flex-wrap gap-1">
+                                <span class="badge bg-dark border border-secondary">C++</span>
+                                <span class="badge bg-dark border border-secondary">Python</span>
+                                <span class="badge bg-dark border border-secondary">OOP</span>
+                                <span class="badge bg-dark border border-secondary">Data Structures</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- شبكة البيانات الشخصية -->
+                <div class="about-info-grid my-4">
+                    <div class="info-item"><span class="info-label">Name:</span> <span class="info-val">Ahmed Mansour Mousa</span></div>
+                    <div class="info-item"><span class="info-label">Education:</span> <span class="info-val">Senior CS Student (Graduation 2027)</span></div>
+                    <div class="info-item"><span class="info-label">Location:</span> <span class="info-val">Mansoura, Egypt</span></div>
+                    <div class="info-item"><span class="info-label">Email:</span> <span class="info-val">mousaahmedmansourkaooo@gmail.com</span></div>
+                </div>
+
+                <!-- زرار الـ CV -->
+                <a href="#" id="downloadResumeBtn" class="btn btn-gradient btn-lg mt-2">
+                    <i class="fa-solid fa-download me-2"></i> Download Resume
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding bg-darker">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">Modern tools and frameworks I use to build fast, scalable, and intuitive web applications.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+                        <h4>HTML5</h4>
+                        <p>Semantic markup, accessible & SEO-optimized structure.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
+                        <h4>CSS3 & Grid</h4>
+                        <p>Modern styling, animations, responsive layouts.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+                        <h4>JavaScript (ES6+)</h4>
+                        <p>DOM manipulation, dynamic interactivity, REST APIs.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="250">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fa-brands fa-bootstrap"></i></div>
+                        <h4>Bootstrap 5</h4>
+                        <p>Rapid UI development with grid systems & components.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fa-solid fa-wind"></i></div>
+                        <h4>Tailwind CSS</h4>
+                        <p>Utility-first styling for sleek custom UI implementations.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="350">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fa-brands fa-figma"></i></div>
+                        <h4>Figma to Code</h4>
+                        <p>Pixel-perfect translation from UI/UX designs to live code.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fa-brands fa-git-alt"></i></div>
+                        <h4>Git & GitHub</h4>
+                        <p>Version control, team collaboration, GitHub repository workflows.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="450">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+                        <h4>C++ & Python</h4>
+                        <p>Strong CS background in OOP, Data Structures & Algorithms.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Services I Provide</h2>
+                <p class="section-subtitle">High quality web design & development tailored for client and business success.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3>Front-End Development</h3>
+                        <p>Building clean, responsive, and cross-browser compatible web pages using modern HTML5, CSS3, Bootstrap, and JS.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                        <h3>Figma to Web Conversion</h3>
+                        <p>Translating wireframes and Figma designs into interactive, pixel-perfect, and fully functional web interfaces.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                        <h3>Responsive Mobile First UI</h3>
+                        <p>Ensuring your site looks stunning and operates seamlessly across smartphones, tablets, laptops, and desktops.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <h3>Performance Optimization</h3>
+                        <p>Optimizing web application speed, DOM structure, CSS styling, and asset delivery for maximum efficiency.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <h3>Interactive DOM Logic</h3>
+                        <p>Enhancing web apps with dynamic interactive components, REST API integrations, and smooth animations.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="350">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-vial-circle-check"></i></div>
+                        <h3>UI/UX Prototyping</h3>
+                        <p>Designing modern visual components, wireframes, and prototypes leveraging modern AI tools like v0.dev.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-darker">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Recent Projects</h2>
+                <p class="section-subtitle">Explore a selection of my real-world Front-End development and design projects.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <div class="project-img-holder">
+                            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1000&auto=format&fit=crop" alt="Fitmaker Landing Page" class="img-fluid project-img">
+                        </div>
+                        <div class="project-body">
+                            <h3>Fitmaker Landing Page</h3>
+                            <p>A modern, highly responsive fitness landing page featuring dynamic layout sections, custom typography, and smooth interactive components.</p>
+                            <div class="project-tech-tags mb-3">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>Bootstrap</span>
+                            </div>
+                            <div class="project-links d-flex gap-2">
+                                <a href="https://github.com/AhmedMansour-29/fitmaker-landing-page" target="_blank" class="btn btn-sm btn-gradient"><i class="fa-brands fa-github me-1"></i> GitHub Repo</a>
+                                <a href="https://github.com/AhmedMansour-29/fitmaker-landing-page" target="_blank" class="btn btn-sm btn-outline-custom"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <div class="project-img-holder">
+                            <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1000&auto=format&fit=crop" alt="VentureHub Graduation Project" class="img-fluid project-img">
+                        </div>
+                        <div class="project-body">
+                            <h3>VentureHub Platform (Senior Project)</h3>
+                            <p>Architected intuitive UI/UX web layouts and front-end modules connecting startup founders, developers, mentors, and investors.</p>
+                            <div class="project-tech-tags mb-3">
+                                <span>Figma</span>
+                                <span>UI/UX</span>
+                                <span>Bootstrap</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links d-flex gap-2">
+                                <a href="https://github.com/AhmedMansour-29" target="_blank" class="btn btn-sm btn-gradient"><i class="fa-brands fa-github me-1"></i> GitHub Repo</a>
+                                <a href="https://github.com/AhmedMansour-29" target="_blank" class="btn btn-sm btn-outline-custom"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card">
+                        <div class="project-img-holder">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop" alt="NTI Summer Training Project" class="img-fluid project-img">
+                        </div>
+                        <div class="project-body">
+                            <h3>NTI Final Web Project</h3>
+                            <p>Engineered and deployed responsive web application with team collaboration workflows using Git/GitHub during the NTI summer training program.</p>
+                            <div class="project-tech-tags mb-3">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>Git</span>
+                            </div>
+                            <div class="project-links d-flex gap-2">
+                                <a href="https://github.com/AhmedMansour-29" target="_blank" class="btn btn-sm btn-gradient"><i class="fa-brands fa-github me-1"></i> GitHub Repo</a>
+                                <a href="https://github.com/AhmedMansour-29" target="_blank" class="btn btn-sm btn-outline-custom"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-card">
+                        <div class="project-img-holder">
+                            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1000&auto=format&fit=crop" alt="Interactive Web Components" class="img-fluid project-img">
+                        </div>
+                        <div class="project-body">
+                            <h3>Interactive UI Components & DOM Apps</h3>
+                            <p>A collection of responsive web components, landing pages, dynamic DOM scripts, and UI prototypes built for client web applications.</p>
+                            <div class="project-tech-tags mb-3">
+                                <span>JavaScript ES6+</span>
+                                <span>DOM Manipulation</span>
+                                <span>CSS Grid</span>
+                            </div>
+                            <div class="project-links d-flex gap-2">
+                                <a href="https://github.com/AhmedMansour-29" target="_blank" class="btn btn-sm btn-gradient"><i class="fa-brands fa-github me-1"></i> GitHub Repo</a>
+                                <a href="https://github.com/AhmedMansour-29" target="_blank" class="btn btn-sm btn-outline-custom"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+<!-- Certifications & Training Section -->
+<section class="section-padding bg-darker" id="certifications">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="hero-badge mb-2"><i class="fas fa-award me-1"></i> Professional Education</span>
+      <h2 class="section-title">Certifications & <span class="gradient-text">Training</span></h2>
+      <p class="section-subtitle">Verified professional training programs and technical accomplishments.</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      
+      <!-- 1. NTI Training Card (المعدل بالشهادة الرسمية) -->
+      <div class="col-lg-12" data-aos="fade-up">
+        <div class="cert-card position-relative overflow-hidden">
+          <div class="cert-glow"></div>
+          <div class="card-body p-4 p-md-5 position-relative z-1">
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3">
+              <div class="d-flex align-items-center gap-3">
+                <div class="cert-icon-wrapper">
+                  <i class="fas fa-laptop-code"></i>
+                </div>
+                <div>
+                  <span class="badge cert-badge mb-1 text-warning border border-warning-subtle">
+                    <i class="fas fa-star me-1"></i> Score: 95%
+                  </span>
+                  <h3 class="cert-title mb-0">Web Designer Training</h3>
+                  <p class="cert-issuer mb-0">National Telecommunication Institute (NTI) & ITIDA</p>
+                </div>
+              </div>
+              <div class="text-md-end">
+                <span class="cert-date d-block"><i class="far fa-calendar-alt me-1"></i> 26 July – 20 August 2026</span>
+              </div>
+            </div>
+
+            <p class="cert-desc mb-3">
+              Successfully completed an intensive <strong>120-hour</strong> summer training course certified by NTI & ITIDA. Mastered professional web design, UI/UX architecture, responsive frameworks, collaborative Git workflows, and freelancing fundamentals.
+            </p>
+
+            <!-- تقسيم الساعات المعتمدة -->
+            <div class="d-flex flex-wrap gap-3 mb-3 fs-7 text-light">
+              <span><i class="fas fa-check-circle text-warning me-1"></i> <strong>Technical:</strong> 90 Hrs</span>
+              <span><i class="fas fa-laptop-house text-warning me-1"></i> <strong>Freelancing:</strong> 30 Hrs</span>
+            </div>
+
+            <div class="cert-skills mb-4">
+              <span class="tech-tag"><i class="fab fa-html5"></i> HTML5</span>
+              <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+              <span class="tech-tag"><i class="fab fa-bootstrap"></i> Bootstrap 5</span>
+              <span class="tech-tag"><i class="fab fa-js"></i> JavaScript ES6+</span>
+              <span class="tech-tag"><i class="fab fa-git-alt"></i> Git & GitHub</span>
+              <span class="tech-tag"><i class="fas fa-user-tie"></i> Freelancing</span>
+            </div>
+<div class="d-flex flex-wrap align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25 gap-3">
+  <div class="d-flex align-items-center gap-2 text-success fs-7">
+    <i class="fas fa-check-circle"></i> <span>Verified Certificate (120 Hours)</span>
+  </div>
+  
+  <div class="d-flex gap-2">
+    <!-- زرار عرض الشهادة الـ PDF في تبويب جديد -->
+    <a href="Ahmed Mansour Eid Ibrahim_2.pdf" target="_blank" class="btn btn-warning btn-sm text-dark fw-bold nti-view-btn">
+      <i class="fas fa-eye me-1"></i> View Certificate
+    </a>
+    
+    <!-- زرار مشاريع جيت هب -->
+    <a href="https://github.com/AhmedMansour-29" target="_blank" class="btn btn-outline-light btn-sm">
+      <i class="fab fa-github me-1"></i> View Projects
+    </a>
+  </div>
+</div>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Python & ML Card -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="cert-card position-relative overflow-hidden h-100">
+          <div class="cert-glow"></div>
+          <div class="card-body p-4 position-relative z-1 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="cert-icon-wrapper">
+                  <i class="fab fa-python"></i>
+                </div>
+                <div>
+                  <span class="badge cert-badge mb-1"><i class="fas fa-star me-1"></i> Grade: Excellent</span>
+                  <h4 class="cert-title mb-0 fs-5">Python & Machine Learning</h4>
+                  <p class="cert-issuer mb-0 fs-7">Mansoura University (DTC)</p>
+                </div>
+              </div>
+              <p class="cert-desc mb-3 fs-7">
+                Completed 108 intensive training hours focusing on Python programming, data science fundamentals, NumPy, Pandas, Matplotlib, and predictive Machine Learning models.
+              </p>
+            </div>
+            <div>
+              <div class="cert-skills mb-3">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">NumPy</span>
+                <span class="tech-tag">Data Science</span>
+              </div>
+              <div class="pt-3 border-top border-secondary border-opacity-25 d-flex align-items-center justify-content-between">
+                <span class="cert-date fs-7"><i class="fas fa-clock me-1"></i> 108 Hours</span>
+                <span class="text-success fs-7"><i class="fas fa-check-circle me-1"></i> Certified</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Business English Card -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="cert-card position-relative overflow-hidden h-100">
+          <div class="cert-glow"></div>
+          <div class="card-body p-4 position-relative z-1 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="cert-icon-wrapper">
+                  <i class="fas fa-language"></i>
+                </div>
+                <div>
+                  <span class="badge cert-badge mb-1"><i class="fas fa-star me-1"></i> Grade: Excellent</span>
+                  <h4 class="cert-title mb-0 fs-5">Business English Certification</h4>
+                  <p class="cert-issuer mb-0 fs-7">Mansoura University (DTC)</p>
+                </div>
+              </div>
+              <p class="cert-desc mb-3 fs-7">
+                Mastered professional corporate communication, technical report writing, presentation delivery, and effective workplace interaction strategies.
+              </p>
+            </div>
+            <div>
+              <div class="cert-skills mb-3">
+                <span class="tech-tag">Corporate Comm.</span>
+                <span class="tech-tag">Technical Writing</span>
+                <span class="tech-tag">Presentations</span>
+              </div>
+              <div class="pt-3 border-top border-secondary border-opacity-25 d-flex align-items-center justify-content-between">
+                <span class="cert-date fs-7"><i class="fas fa-award me-1"></i> Advanced Level</span>
+                <span class="text-success fs-7"><i class="fas fa-check-circle me-1"></i> Certified</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Contact Section -->
+    
+    <!-- Contact Section -->
+<section class="section-padding bg-darker" id="contact">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="hero-badge mb-2"><i class="fas fa-paper-plane me-1"></i> Get In Touch</span>
+      <h2 class="section-title">Let's Work <span class="gradient-text">Together</span></h2>
+      <p class="section-subtitle">Have a project in mind or want to discuss opportunities? Drop me a message!</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <!-- Contact Info Sidebar -->
+      <div class="col-lg-5" data-aos="fade-right">
+        <div class="contact-info-card h-100 p-4 p-md-5">
+          <h3 class="gradient-text fw-bold mb-3">Contact Details</h3>
+          <p class="text-gray mb-4">Feel free to reach out directly via email, phone, or location below.</p>
+
+          <div class="contact-item d-flex align-items-center mb-4">
+            <a href="mailto:mousaahmedmansourkaooo@gmail.com" class="contact-icon-box text-decoration-none">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <div class="ms-3">
+              <span class="contact-label">Email Me</span>
+              <a href="mailto:mousaahmedmansourkaooo@gmail.com" class="contact-value d-block text-decoration-none">
+                mousaahmedmansourkaooo@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-item d-flex align-items-center mb-4">
+            <a href="tel:+201033472632" class="contact-icon-box text-decoration-none">
+              <i class="fas fa-phone-alt"></i>
+            </a>
+            <div class="ms-3">
+              <span class="contact-label">Call / WhatsApp</span>
+              <a href="tel:+201033472632" class="contact-value d-block text-decoration-none">
+                +20 103 347 2632
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-item d-flex align-items-center">
+            <div class="contact-icon-box">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="ms-3">
+              <span class="contact-label">Location</span>
+              <span class="contact-value d-block">Mansoura, Egypt</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-7" data-aos="fade-left">
+        <div class="contact-form-card p-4 p-md-5">
+          <form id="contactForm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label text-gray fs-7">Your Name</label>
+                <input type="text" class="form-control custom-input" placeholder="John Doe" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label text-gray fs-7">Your Email</label>
+                <input type="email" class="form-control custom-input" placeholder="name@example.com" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label text-gray fs-7">Subject</label>
+                <input type="text" class="form-control custom-input" placeholder="Project Inquiry / Freelance Work" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label text-gray fs-7">Message</label>
+                <textarea class="form-control custom-input" rows="5" placeholder="Write your message here..." required></textarea>
+              </div>
+              <div class="col-12 mt-4">
+                <button type="submit" class="btn btn-gradient w-100 py-3 d-flex align-items-center justify-content-center gap-2">
+                  <span>Send Message</span>
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer py-4">
+  <div class="container">
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <a href="#" class="footer-logo">Ahmed <span class="text-accent">Mansour</span></a>
+      
+      <div class="footer-links d-flex gap-4 fs-7">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <!-- Footer Social Links (Email is fully active) -->
+      <div class="footer-socials d-flex gap-2">
+        <a href="https://github.com/AhmedMansour-29" target="_blank" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/ahmed-kapoo-b086aa327" target="_blank" title="LinkedIn">
+  <i class="fab fa-linkedin-in"></i>
+</a>
+
+        <a href="mailto:mousaahmedmansourkaooo@gmail.com" title="Send Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+    <hr class="my-3 border-secondary border-opacity-25">
+    <div class="text-center text-muted fs-7">
+       &copy; 2026 Ahmed Mansour .
+    </div>
+  </div>
+</footer>
+
+    <!-- JS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="scribt.js"></script>
+</body>
+</html>

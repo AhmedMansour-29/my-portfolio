@@ -1,0 +1,930 @@
+:root {
+    --bg-main: #0a0e17;
+    --bg-darker: #060910;
+    --bg-card: #111726;
+    --bg-card-hover: #172033;
+    --accent-blue: #3b82f6;
+    --accent-red: #ff4b6e;
+    --border-color: rgba(59, 130, 246, 0.2);
+    --border-hover: rgba(59, 130, 246, 0.5);
+    --text-white: #ffffff;
+    --text-gray: #9ca3af;
+    --text-muted: #6b7280;
+    --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #ff4b6e 100%);
+    --gradient-btn: linear-gradient(90deg, #3b82f6, #ec4899);
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-white);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--accent-blue);
+    border-radius: 4px;
+}
+
+.text-accent { color: var(--accent-blue); }
+.bg-darker { background-color: var(--bg-darker); }
+.section-padding { padding: 90px 0; }
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+.section-subtitle {
+    color: var(--text-gray);
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Custom Buttons */
+.btn-gradient {
+    background: var(--gradient-btn);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+}
+.btn-gradient:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(236, 72, 153, 0.5);
+    color: #fff;
+}
+.btn-outline-custom {
+    background: transparent;
+    border: 1px solid var(--border-hover);
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+.btn-outline-custom:hover {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: var(--accent-blue);
+    color: #fff;
+    transform: translateY(-3px);
+}
+.btn-primary-custom {
+    background: rgba(59, 130, 246, 0.15);
+    border: 1px solid var(--accent-blue);
+    color: #fff;
+    border-radius: 30px;
+    padding: 8px 22px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-primary-custom:hover {
+    background: var(--accent-blue);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Navbar */
+.custom-navbar {
+    background: rgba(10, 14, 23, 0.85);
+    backdrop-filter: blur(12px);
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+.custom-navbar.navbar-scrolled {
+    padding: 12px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+}
+.nav-link {
+    color: var(--text-gray) !important;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--accent-blue) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    padding-top: 130px;
+    padding-bottom: 80px;
+}
+.hero-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    color: var(--accent-blue);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.hero-title {
+    font-size: 3.8rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+.hero-desc {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    margin-bottom: 35px;
+    max-width: 580px;
+}
+
+/* Hero Orbit & Profile Frame Fixes */
+.hero-img-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 320px;
+    height: 320px;
+    margin: 0 auto;
+}
+.profile-frame {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border: 3px solid var(--accent-blue);
+    box-shadow: 0 0 35px rgba(59, 130, 246, 0.3);
+    z-index: 2;
+}
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.orbit-container {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    top: -10px;
+    left: -10px;
+    border-radius: 50%;
+    border: 1px dashed rgba(59, 130, 246, 0.3);
+    animation: spinOrbit 25s linear infinite;
+    z-index: 1;
+}
+.orbit-icon {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-hover);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+.icon-1 { top: -10px; left: 50%; transform: translateX(-50%); }
+.icon-2 { top: 30%; right: -15px; }
+.icon-3 { bottom: 10%; right: 10px; }
+.icon-4 { bottom: 10%; left: 10px; }
+.icon-5 { top: 30%; left: -15px; }
+
+@keyframes spinOrbit {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* About Section Image Styling */
+.about-img-box {
+    position: relative;
+    padding: 10px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(239, 68, 68, 0.3));
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+.about-img-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 14px;
+}
+
+.about-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+.info-item {
+    background: var(--bg-card);
+    padding: 12px 18px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    word-break: break-word; /* يمنع خروج البريد الإلكتروني عن حدود البطاقة */
+}
+.info-label {
+    color: var(--text-gray);
+    font-size: 0.85rem;
+    display: block;
+}
+.info-val {
+    font-weight: 600;
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+/* Cards & Layout Modules */
+.skill-card, .service-card, .project-card, .contact-info-box, .contact-form, .testimonial-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+.skill-card { padding: 25px 20px; height: 100%; }
+.skill-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent-blue);
+    transform: translateY(-8px);
+}
+.skill-icon { font-size: 2.2rem; color: var(--accent-blue); margin-bottom: 15px; }
+
+.service-card { padding: 30px; height: 100%; }
+.service-card:hover {
+    border-color: var(--accent-red);
+    transform: translateY(-8px);
+}
+.service-icon {
+    width: 55px; height: 55px;
+    background: rgba(239, 68, 68, 0.1);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; color: var(--accent-red); margin-bottom: 20px;
+}
+
+.project-card { overflow: hidden; height: 100%; }
+.project-card:hover { border-color: var(--accent-blue); transform: translateY(-8px); }
+.project-img-holder { height: 220px; overflow: hidden; }
+.project-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.project-card:hover .project-img { transform: scale(1.08); }
+.project-body { padding: 25px; }
+.project-tech-tags span {
+    display: inline-block;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent-blue);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin: 0 4px 6px 0;
+}
+
+/* Contact Us Section Fixes */
+.contact-info-box, .contact-form {
+    padding: 35px;
+    height: 100%;
+}
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+.custom-input {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    color: #fff;
+    border-radius: 10px;
+    padding: 12px 15px;
+}
+.custom-input:focus {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--accent-blue);
+    color: #fff;
+    box-shadow: none;
+}
+.form-label {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+/* Footer */
+.footer { background: #04060b; border-top: 1px solid rgba(255, 255, 255, 0.05); }
+.footer-logo { font-size: 1.4rem; font-weight: 800; color: #fff; text-decoration: none; }
+.footer-links a { color: var(--text-gray); text-decoration: none; transition: color 0.3s ease; }
+.footer-links a:hover { color: var(--accent-blue); }
+.footer-socials a {
+    width: 36px; height: 36px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: #fff; text-decoration: none; transition: all 0.3s ease;
+}
+.footer-socials a:hover { background: var(--accent-blue); transform: translateY(-3px); }
+
+/* Top Progress Bar & Cursor */
+#scroll-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: var(--gradient-btn);
+    width: 0%;
+    z-index: 10000;
+    transition: width 0.1s ease;
+}
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    background: rgba(59, 130, 246, 0.3);
+    border: 2px solid var(--accent-blue);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+    transition: transform 0.1s ease-out;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 991px) {
+    .hero-title { font-size: 2.8rem; }
+    .hero-img-wrapper { width: 260px; height: 260px; }
+    .profile-frame { width: 220px; height: 220px; }
+    .orbit-container { width: 270px; height: 270px; }
+    .contact-info-box, .contact-form { padding: 25px; }
+}
+
+/* Certifications Section Custom Styles */
+.cert-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cert-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-blue);
+    box-shadow: 0 15px 35px rgba(59, 130, 246, 0.15);
+}
+
+.cert-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+    transition: transform 0.5s ease;
+}
+
+.cert-card:hover .cert-glow {
+    transform: scale(1.2);
+}
+
+.cert-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid var(--border-hover);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-blue);
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.cert-badge {
+    background: rgba(236, 72, 153, 0.15);
+    color: #ec4899;
+    border: 1px solid rgba(236, 72, 153, 0.3);
+    font-size: 0.75rem;
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+.cert-title {
+    color: var(--text-white);
+    font-weight: 700;
+    font-size: 1.35rem;
+}
+
+.cert-issuer {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+.cert-date {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 6px 14px;
+    border-radius: 12px;
+    color: var(--text-gray);
+    font-size: 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cert-desc {
+    color: #d1d5db;
+    font-size: 0.98rem;
+    line-height: 1.7;
+}
+
+.cert-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    background: rgba(59, 130, 246, 0.08);
+    color: var(--accent-blue);
+    border: 1px solid var(--border-color);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cert-card:hover .tech-tag {
+    background: rgba(59, 130, 246, 0.15);
+    border-color: rgba(59, 130, 246, 0.4);
+}
+
+
+/* Contact Section & Footer Styles */
+.contact-info-card, .contact-form-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.contact-info-card:hover, .contact-form-card:hover {
+    border-color: var(--accent-blue);
+}
+
+.contact-icon-box {
+    width: 50px;
+    height: 50px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid var(--border-hover);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-blue);
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.contact-item:hover .contact-icon-box {
+    background: var(--accent-blue);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.contact-label {
+    color: var(--text-gray);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contact-value {
+    color: var(--text-white);
+    font-weight: 600;
+    font-size: 0.95rem;
+    word-break: break-word;
+    transition: color 0.3s ease;
+}
+
+a.contact-value:hover {
+    color: var(--accent-blue);
+}
+
+.custom-input {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid var(--border-color) !important;
+    color: #fff !important;
+    border-radius: 12px !important;
+    padding: 12px 16px !important;
+    transition: all 0.3s ease !important;
+}
+
+.custom-input:focus {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border-color: var(--accent-blue) !important;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.2) !important;
+}
+
+.custom-input::placeholder {
+    color: var(--text-muted);
+}
+
+.cursor-blink {
+    animation: blink 0.8s infinite;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+
+
+/* ==========================================
+   Custom Royal Purple & Gold Mode Theme
+   ========================================== */
+body.light-mode {
+    background: linear-gradient(135deg, #130f1e 0%, #241734 100%) !important;
+    color: #f1f5f9 !important;
+}
+
+/* الكروت والهيدر في المود الجديد */
+body.light-mode .navbar-scrolled,
+body.light-mode .card,
+body.light-mode .skill-card,
+body.light-mode .cert-card,
+body.light-mode .hero-badge,
+body.light-mode #chat-box {
+    background: rgba(36, 23, 52, 0.85) !important;
+    backdrop-filter: blur(12px) !important;
+    color: #f1f5f9 !important;
+    border: 1px solid rgba(168, 85, 247, 0.25) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* نصوص الفقرات والشرح */
+body.light-mode .nav-link,
+body.light-mode .hero-desc,
+body.light-mode p,
+body.light-mode .text-muted {
+    color: #cbd5e1 !important;
+}
+
+/* العناوين بلون ذهبي فخم مشع */
+body.light-mode h1, 
+body.light-mode h2, 
+body.light-mode h3, 
+body.light-mode h4, 
+body.light-mode h5, 
+body.light-mode h6,
+body.light-mode .fw-bold {
+    color: #fbbf24 !important;
+}
+
+/* زرار التبديل نفسه بالذهبي والبنفسجي */
+body.light-mode #theme-toggle-btn {
+    background-color: #fbbf24 !important;
+    color: #130f1e !important;
+    border-color: #fbbf24 !important;
+}
+
+
+/* ==========================================
+   تظبيط لون خط نقاط About Me في المود الغامق
+   ========================================== */
+#about .text-muted,
+body.light-mode #about .text-muted {
+    color: #e2e8f0 !important; /* لون فاتح وواضح جداً للقراءة */
+}
+
+/* تنوير الكلام الجانبي جوه النقاط */
+#about ul li span {
+    color: #f8fafc !important;
+}
+
+/* ==========================================
+   تظبيط كارت NTI والبادج الجديد
+   ========================================== */
+
+/* تنوير البادج الأصفر للـ 95% */
+.cert-card .border-warning-subtle {
+    border-color: rgba(251, 191, 36, 0.4) !important;
+    background-color: rgba(251, 191, 36, 0.1) !important;
+}
+
+/* تظبيط لون خط الساعات المعتمدة في المودين */
+.cert-card .text-light strong {
+    color: #fbbf24 !important;
+}
+
+/* إضاءة نيون خفيفة لكروت الشهادات لما تمشي الماوس عليها */
+.cert-card:hover {
+    border-color: rgba(251, 191, 36, 0.3) !important;
+    box-shadow: 0 10px 30px rgba(251, 191, 36, 0.1) !important;
+}
+
+/* ==========================================
+   تهدية حركة الميول لكارت NTI بس
+   ========================================== */
+
+/* التحكم في الكارت الأساسي */
+#certifications .col-lg-12 .cert-card {
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease !important;
+}
+
+/* حركة الـ Hover تبقى رفعة خفيفة جداً (3px بس) */
+#certifications .col-lg-12 .cert-card:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(251, 191, 36, 0.12) !important;
+}
+
+
+/* ==========================================
+   تنسيق الزيادات التفاعلية لتجنب التداخل
+   ========================================== */
+
+/* زرار تغيير الثيم (أسفل اليسار) */
+#theme-toggle-btn {
+    bottom: 25px !important;
+    left: 25px !important;
+    width: 45px;
+    height: 45px;
+    z-index: 9999 !important;
+}
+
+/* زرار الشات الذكي (أسفل اليمين) */
+#toggle-chat-btn {
+    bottom: 25px !important;
+    right: 25px !important;
+    z-index: 9999 !important;
+}
+
+/* زرار العودة للأعلى (فوق زرار الشات مباشرة) */
+#backToTopBtn {
+    bottom: 85px !important;
+    right: 25px !important;
+    z-index: 9998 !important;
+    transition: all 0.3s ease;
+}
+
+/* أنيميشن ناعم لكروت المشاريع عند الفلترة */
+.project-card-item {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+/* ======================================================================
+   إضافات التصميم الفاخرة للمشروع
+   ====================================================================== */
+
+/* خلفية ضوئية متحركة (Glow Blobs) */
+body::before, body::after {
+    content: '';
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -1;
+    opacity: 0.12;
+    animation: floatBlob 10s infinite alternate ease-in-out;
+    pointer-events: none;
+}
+
+body::before {
+    top: -100px;
+    left: -100px;
+    background: var(--accent-blue);
+}
+
+body::after {
+    bottom: -100px;
+    right: -100px;
+    background: #ec4899;
+    animation-delay: -5s;
+}
+
+@keyframes floatBlob {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(40px, 40px) scale(1.1); }
+}
+
+/* تأثير إضاءة الحدود التفاعلية (Border Beam Hover) للكروت */
+.project-card, .cert-card, .skill-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::after, .cert-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 2px solid transparent;
+    background: linear-gradient(90deg, var(--accent-blue), #ec4899) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.project-card:hover::after, .cert-card:hover::after {
+    opacity: 1;
+}
+
+/* أنيميشن ناعم لفلترة المشاريع */
+.project-card-item {
+    transition: all 0.4s ease-in-out;
+}
+
+/* تصميم إشعار الترحيب التقني (Welcome Toast UI) */
+.tech-welcome-toast {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    animation: slideUpToast 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    transition: all 0.5s ease;
+}
+
+@keyframes slideUpToast {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ======================================================================
+   إضافات التصميم الفاخرة والمطورة بالكامل
+   ====================================================================== */
+
+/* خلفية ضوئية متحركة (Glow Blobs) */
+body::before, body::after {
+    content: '';
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -1;
+    opacity: 0.12;
+    animation: floatBlob 10s infinite alternate ease-in-out;
+    pointer-events: none;
+}
+
+body::before {
+    top: -100px;
+    left: -100px;
+    background: var(--accent-blue, #2563eb);
+}
+
+body::after {
+    bottom: -100px;
+    right: -100px;
+    background: #ec4899;
+    animation-delay: -5s;
+}
+
+@keyframes floatBlob {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(40px, 40px) scale(1.1); }
+}
+
+/* تأثير إضاءة الحدود التفاعلية (Border Beam Hover) للكروت */
+.project-card, .cert-card, .skill-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::after, .cert-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 2px solid transparent;
+    background: linear-gradient(90deg, var(--accent-blue, #2563eb), #ec4899) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.project-card:hover::after, .cert-card:hover::after {
+    opacity: 1;
+}
+
+/* أنيميشن ناعم لفلترة المشاريع */
+.project-card-item {
+    transition: all 0.4s ease-in-out;
+}
+
+/* تصميم إشعار الترحيب التقني (Welcome Toast UI) */
+.tech-welcome-toast {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    animation: slideUpToast 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    transition: all 0.5s ease;
+}
+
+@keyframes slideUpToast {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* زر العودة لأعلى الصفحة */
+.back-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background: var(--accent-blue, #2563eb);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 998;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    font-size: 1rem;
+}
+
+.back-to-top-btn:hover {
+    transform: translateY(-3px);
+    background: #1d4ed8;
+}
+
+/* شريط تقدم القراءة فوق خالص */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-blue, #2563eb), #ec4899);
+    width: 0%;
+    z-index: 10000;
+    transition: width 0.1s ease-out;
+}
